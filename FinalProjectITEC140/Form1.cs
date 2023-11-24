@@ -9,6 +9,10 @@ namespace FinalProjectITEC140
         Bitmap Hungry = new Bitmap("../../../resources/HungryPikachu.jpg");
         Bitmap Fainted = new Bitmap("../../../resources/FaintedPikachu.jpg");
         Bitmap Extatic = new Bitmap("../../../resources/ExtaticPikachu.jpg");
+        Bitmap Happy = new Bitmap("../../../resources/HappyPikachu.jppg");
+        Bitmap Nervous = new Bitmap("../../../resources/NervousPikachu.jpg");
+        Bitmap Sad = new Bitmap("../../../resources/SadPikachu");
+        
         public Form1()
         {
             InitializeComponent();

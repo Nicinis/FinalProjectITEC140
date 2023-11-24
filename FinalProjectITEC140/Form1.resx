@@ -117,4 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AngryPikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\AngryPikachu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ExtaticPikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ExtaticPikachu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FaintedPikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\FaintedPikachu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HappyPikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\HappyPikachu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HungryPikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\HungryPikachu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NervousPikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\NervousPikachu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NeutralPikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\NeutralPikachu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PoopinPikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\PoopinPikachu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SadPikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\SadPikachu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SleepingPikachu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\SleepingPikachu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

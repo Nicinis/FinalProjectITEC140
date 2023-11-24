@@ -28,19 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             prbHealth = new ProgressBar();
             label1 = new Label();
             prbPee = new ProgressBar();
             label2 = new Label();
             prbHunger = new ProgressBar();
             label3 = new Label();
-            progressBar1 = new ProgressBar();
+            prbHappiness = new ProgressBar();
             label4 = new Label();
             btnFeed = new Button();
             btnBathRoom = new Button();
             picMoods = new PictureBox();
             btnPlay = new Button();
             btnPet = new Button();
+            FoodTimer = new System.Windows.Forms.Timer(components);
+            BathroomTimer = new System.Windows.Forms.Timer(components);
+            HappinessTimer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)picMoods).BeginInit();
             SuspendLayout();
             // 
@@ -50,7 +54,6 @@
             prbHealth.Name = "prbHealth";
             prbHealth.Size = new Size(260, 41);
             prbHealth.TabIndex = 0;
-            prbHealth.Value = 100;
             // 
             // label1
             // 
@@ -87,7 +90,7 @@
             prbHunger.Name = "prbHunger";
             prbHunger.Size = new Size(221, 34);
             prbHunger.TabIndex = 4;
-            prbHunger.Value = 100;
+            prbHunger.Value = 90;
             // 
             // label3
             // 
@@ -100,13 +103,12 @@
             label3.Text = "HUNGER:";
             label3.Click += label3_Click;
             // 
-            // progressBar1
+            // prbHappiness
             // 
-            progressBar1.Location = new Point(194, 82);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(237, 34);
-            progressBar1.TabIndex = 6;
-            progressBar1.Value = 100;
+            prbHappiness.Location = new Point(194, 82);
+            prbHappiness.Name = "prbHappiness";
+            prbHappiness.Size = new Size(237, 34);
+            prbHappiness.TabIndex = 6;
             // 
             // label4
             // 
@@ -127,6 +129,9 @@
             btnFeed.TabIndex = 8;
             btnFeed.Text = "FEED";
             btnFeed.UseVisualStyleBackColor = true;
+            btnFeed.Click += btnFeed_Click;
+            btnFeed.MouseDown += btnFeed_MouseDown;
+            btnFeed.MouseUp += btnFeed_MouseUp;
             // 
             // btnBathRoom
             // 
@@ -137,6 +142,9 @@
             btnBathRoom.TabIndex = 9;
             btnBathRoom.Text = "TAKE OUTSIDE";
             btnBathRoom.UseVisualStyleBackColor = true;
+            btnBathRoom.Click += btnBathRoom_Click;
+            btnBathRoom.MouseDown += btnBathRoom_MouseDown;
+            btnBathRoom.MouseUp += btnBathRoom_MouseUp;
             // 
             // picMoods
             // 
@@ -155,6 +163,9 @@
             btnPlay.TabIndex = 11;
             btnPlay.Text = "PLAY";
             btnPlay.UseVisualStyleBackColor = true;
+            btnPlay.Click += btnPlay_Click;
+            btnPlay.MouseDown += btnPlay_MouseDown;
+            btnPlay.MouseUp += btnPlay_MouseUp;
             // 
             // btnPet
             // 
@@ -165,6 +176,22 @@
             btnPet.TabIndex = 12;
             btnPet.Text = "PET";
             btnPet.UseVisualStyleBackColor = true;
+            btnPet.Click += btnPet_Click;
+            // 
+            // FoodTimer
+            // 
+            FoodTimer.Interval = 15000;
+            FoodTimer.Tick += FoodTimer_Tick;
+            // 
+            // BathroomTimer
+            // 
+            BathroomTimer.Interval = 10000;
+            BathroomTimer.Tick += BathroomTimer_Tick;
+            // 
+            // HappinessTimer
+            // 
+            HappinessTimer.Interval = 20000;
+            HappinessTimer.Tick += HappinessTimer_Tick;
             // 
             // Form1
             // 
@@ -177,7 +204,7 @@
             Controls.Add(btnBathRoom);
             Controls.Add(btnFeed);
             Controls.Add(label4);
-            Controls.Add(progressBar1);
+            Controls.Add(prbHappiness);
             Controls.Add(label3);
             Controls.Add(prbHunger);
             Controls.Add(label2);
@@ -200,12 +227,15 @@
         private Label label2;
         private ProgressBar prbHunger;
         private Label label3;
-        private ProgressBar progressBar1;
+        private ProgressBar prbHappiness;
         private Label label4;
         private Button btnFeed;
         private Button btnBathRoom;
         private PictureBox picMoods;
         private Button btnPlay;
         private Button btnPet;
+        private System.Windows.Forms.Timer FoodTimer;
+        private System.Windows.Forms.Timer BathroomTimer;
+        private System.Windows.Forms.Timer HappinessTimer;
     }
 }

@@ -54,7 +54,7 @@
             prbHealth.Name = "prbHealth";
             prbHealth.Size = new Size(260, 41);
             prbHealth.TabIndex = 0;
-            prbHealth.Value = 5;
+            prbHealth.Value = 100;
             // 
             // label1
             // 
@@ -73,7 +73,7 @@
             prbPee.Name = "prbPee";
             prbPee.Size = new Size(163, 34);
             prbPee.TabIndex = 2;
-            prbPee.Value = 100;
+            prbPee.Value = 70;
             // 
             // label2
             // 
@@ -91,7 +91,7 @@
             prbHunger.Name = "prbHunger";
             prbHunger.Size = new Size(221, 34);
             prbHunger.TabIndex = 4;
-            prbHunger.Value = 90;
+            prbHunger.Value = 45;
             // 
             // label3
             // 
@@ -110,6 +110,7 @@
             prbHappiness.Name = "prbHappiness";
             prbHappiness.Size = new Size(237, 34);
             prbHappiness.TabIndex = 6;
+            prbHappiness.Value = 80;
             // 
             // label4
             // 
@@ -181,7 +182,7 @@
             // 
             // FoodTimer
             // 
-            FoodTimer.Interval = 15000;
+            FoodTimer.Interval = 20000;
             FoodTimer.Tick += FoodTimer_Tick;
             // 
             // BathroomTimer
@@ -191,7 +192,7 @@
             // 
             // HappinessTimer
             // 
-            HappinessTimer.Interval = 20000;
+            HappinessTimer.Interval = 15000;
             HappinessTimer.Tick += HappinessTimer_Tick;
             // 
             // Form1

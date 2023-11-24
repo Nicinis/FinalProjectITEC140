@@ -31,27 +31,55 @@ namespace FinalProjectITEC140
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            picMoods.Image = Neutral;
         }
-
 
         private void btnFeed_Click(object sender, EventArgs e)
         {
-
+            if (btnFeed.Enabled == true && prbHunger.Value < 90)
+            {
+                prbHunger.Value += 10;
+            }
+            else if (btnFeed.Enabled == true && prbHunger.Value > 90) 
+            {
+                prbHunger.Value = 100;
+            }
         }
 
         private void btnBathRoom_Click(object sender, EventArgs e)
         {
-
+            if (btnBathRoom.Enabled && prbPee.Value > 30)
+            {
+                prbPee.Value -= 30;
+            }
+            else if (btnBathRoom.Enabled == true && prbPee.Value < 30) 
+            {
+                prbPee.Value = 0;
+            }
         }
 
         private void btnPet_Click(object sender, EventArgs e)
         {
-
+            if (btnPet.Enabled == true && prbHappiness.Value < 100)
+            {
+                prbHappiness.Value += 5;
+            }
+            else if (btnPet.Enabled == true && prbHappiness.Value > 95) 
+            {
+                prbHappiness.Value = 100;
+            }
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-
+            if (btnPlay.Enabled == true && prbHappiness.Value < 85)
+            {
+                prbHappiness.Value += 15;
+            }
+            else if (btnPlay.Enabled == true && prbHappiness.Value > 85)
+            {
+                prbHappiness.Value = 100;
+            }
         }
 
         private void btnPlay_MouseDown(object sender, MouseEventArgs e)
@@ -66,13 +94,12 @@ namespace FinalProjectITEC140
 
         private void btnBathRoom_MouseDown(object sender, MouseEventArgs e)
         {
-            picMoods.Image = Poopin;
+  
         }
 
         private void btnBathRoom_MouseUp(object sender, MouseEventArgs e)
         {
-            picMoods.Image = Neutral;
-            prbPee.Value -= 50;
+          
         }
 
         private void btnFeed_MouseDown(object sender, MouseEventArgs e)
@@ -88,17 +115,17 @@ namespace FinalProjectITEC140
         {
             if (prbHunger.Value > 0)
             {
-                prbHunger.Value -= 5;
+                prbHunger.Value -= 10;
             }
             else if (prbHunger.Value == 0)
             {
                 prbHunger.Value -= 0;
             }
-            if (prbHunger.Value == 0)
+            if (prbHunger.Value == 0 && prbHealth.Value <= 100 && prbHealth.Value > 0)
             {
                 prbHealth.Value -= 5;
             }
-            else if (prbHealth.Value == 0)
+            else if (prbHunger.Value == 0 && prbHealth.Value == 0)
             {
                 prbHealth.Value -= 0;
             }
@@ -115,7 +142,7 @@ namespace FinalProjectITEC140
             {
                 prbPee.Value += 0;
             }
-            if (prbPee.Value == 100 && prbHappiness.Value < 100 && prbHappiness.Value > 0)
+            if (prbPee.Value == 100 && prbHappiness.Value <= 100 && prbHappiness.Value > 0)
             {
                 prbHappiness.Value -= 5;
             }
@@ -123,7 +150,7 @@ namespace FinalProjectITEC140
             {
                 prbHappiness.Value -= 0;
             }
-            if (prbPee.Value == 100 && prbHappiness.Value == 0 && prbHealth.Value < 100 && prbHealth.Value > 0) 
+            if (prbPee.Value == 100 && prbHappiness.Value == 0 && prbHealth.Value <= 100 && prbHealth.Value > 0) 
             {  
                 prbHealth.Value -= 5;
             }
@@ -144,7 +171,7 @@ namespace FinalProjectITEC140
             {
                 prbHappiness.Value -= 0;
             }
-            if (prbHappiness.Value == 0 && prbHealth.Value < 100 && prbHealth.Value > 0)
+            if (prbHappiness.Value == 0 && prbHealth.Value <= 100 && prbHealth.Value > 0)
             {
                 prbHealth.Value -= 5;
             }

@@ -54,6 +54,7 @@
             prbHealth.Name = "prbHealth";
             prbHealth.Size = new Size(260, 41);
             prbHealth.TabIndex = 0;
+            prbHealth.Value = 5;
             // 
             // label1
             // 

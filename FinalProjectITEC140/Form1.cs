@@ -12,20 +12,11 @@ namespace FinalProjectITEC140
         public Form1()
         {
             InitializeComponent();
+
             FoodTimer.Enabled = true;
             BathroomTimer.Enabled = true;
             HappinessTimer.Enabled = true;
-            if (prbHealth.Value == 0)
-            {
-                picMoods.Image = Fainted;
-                MessageBox.Show("Pikachu has fainted");
-            }
-
-            if (prbHappiness.Value >= 80 && prbHealth.Value >= 80 && prbHunger.Value >= 80 && prbPee.Value <= 20)
-            {
-                picMoods.Image = Extatic;
-            }
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -153,14 +144,14 @@ namespace FinalProjectITEC140
             {
                 prbHappiness.Value -= 0;
             }
-            //if (prbHappiness.Value == 0)
-            //{
-            //    prbHealth.Value -= 5;
-            //}
-            //else if (prbHealth.Value == 0) 
-            //{
-            //    prbHealth.Value -= 0;
-            //}
+            if (prbHappiness.Value == 0 && prbHealth.Value < 100 && prbHealth.Value > 0)
+            {
+                prbHealth.Value -= 5;
+            }
+            else if (prbHappiness.Value == 0 && prbHealth.Value == 0)
+            {
+                prbHealth.Value -= 0;
+            }
 
         }
     }

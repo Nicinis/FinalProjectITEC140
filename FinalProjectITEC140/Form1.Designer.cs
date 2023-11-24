@@ -38,9 +38,10 @@
             label4 = new Label();
             btnFeed = new Button();
             btnBathRoom = new Button();
-            pictureBox1 = new PictureBox();
+            picMoods = new PictureBox();
             btnPlay = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            btnPet = new Button();
+            ((System.ComponentModel.ISupportInitialize)picMoods).BeginInit();
             SuspendLayout();
             // 
             // prbHealth
@@ -82,7 +83,7 @@
             // 
             // prbHunger
             // 
-            prbHunger.Location = new Point(194, 124);
+            prbHunger.Location = new Point(194, 122);
             prbHunger.Name = "prbHunger";
             prbHunger.Size = new Size(221, 34);
             prbHunger.TabIndex = 4;
@@ -137,13 +138,13 @@
             btnBathRoom.Text = "TAKE OUTSIDE";
             btnBathRoom.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // picMoods
             // 
-            pictureBox1.Location = new Point(194, 217);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(200, 200);
-            pictureBox1.TabIndex = 10;
-            pictureBox1.TabStop = false;
+            picMoods.Location = new Point(194, 217);
+            picMoods.Name = "picMoods";
+            picMoods.Size = new Size(200, 200);
+            picMoods.TabIndex = 10;
+            picMoods.TabStop = false;
             // 
             // btnPlay
             // 
@@ -155,13 +156,24 @@
             btnPlay.Text = "PLAY";
             btnPlay.UseVisualStyleBackColor = true;
             // 
+            // btnPet
+            // 
+            btnPet.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPet.Location = new Point(400, 335);
+            btnPet.Name = "btnPet";
+            btnPet.Size = new Size(144, 82);
+            btnPet.TabIndex = 12;
+            btnPet.Text = "PET";
+            btnPet.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1610, 1153);
+            ClientSize = new Size(627, 536);
+            Controls.Add(btnPet);
             Controls.Add(btnPlay);
-            Controls.Add(pictureBox1);
+            Controls.Add(picMoods);
             Controls.Add(btnBathRoom);
             Controls.Add(btnFeed);
             Controls.Add(label4);
@@ -174,7 +186,8 @@
             Controls.Add(prbHealth);
             Name = "Form1";
             Text = "Pikachu Petcare";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)picMoods).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -191,7 +204,8 @@
         private Label label4;
         private Button btnFeed;
         private Button btnBathRoom;
-        private PictureBox pictureBox1;
+        private PictureBox picMoods;
         private Button btnPlay;
+        private Button btnPet;
     }
 }

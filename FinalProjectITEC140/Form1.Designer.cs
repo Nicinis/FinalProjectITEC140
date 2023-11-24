@@ -179,6 +179,8 @@
             btnPet.Text = "PET";
             btnPet.UseVisualStyleBackColor = true;
             btnPet.Click += btnPet_Click;
+            btnPet.MouseDown += btnPet_MouseDown;
+            btnPet.MouseUp += btnPet_MouseUp;
             // 
             // FoodTimer
             // 

@@ -88,10 +88,12 @@
             // prbHunger
             // 
             prbHunger.Location = new Point(194, 122);
+            prbHunger.Maximum = 60;
             prbHunger.Name = "prbHunger";
-            prbHunger.Size = new Size(221, 34);
+            prbHunger.Size = new Size(217, 34);
+            prbHunger.Style = ProgressBarStyle.Continuous;
             prbHunger.TabIndex = 4;
-            prbHunger.Value = 45;
+            prbHunger.Value = 40;
             // 
             // label3
             // 
@@ -189,12 +191,12 @@
             // 
             // BathroomTimer
             // 
-            BathroomTimer.Interval = 10000;
+            BathroomTimer.Interval = 8000;
             BathroomTimer.Tick += BathroomTimer_Tick;
             // 
             // HappinessTimer
             // 
-            HappinessTimer.Interval = 15000;
+            HappinessTimer.Interval = 12000;
             HappinessTimer.Tick += HappinessTimer_Tick;
             // 
             // Form1

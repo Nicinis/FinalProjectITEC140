@@ -137,7 +137,7 @@ namespace FinalProjectITEC140
             {
                 prbHunger.Value -= 0;
             }
-            if (prbHunger.Value == 0 && prbHealth.Value <= 100 && prbHealth.Value > 0)
+            if (prbHunger.Value == 0 && prbHealth.Value <= 60 && prbHealth.Value > 0)
             {
                 prbHealth.Value -= 5;
             }

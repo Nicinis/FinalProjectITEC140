@@ -45,6 +45,7 @@
             FoodTimer = new System.Windows.Forms.Timer(components);
             BathroomTimer = new System.Windows.Forms.Timer(components);
             HappinessTimer = new System.Windows.Forms.Timer(components);
+            btnExit = new Button();
             ((System.ComponentModel.ISupportInitialize)picMoods).BeginInit();
             SuspendLayout();
             // 
@@ -199,11 +200,23 @@
             HappinessTimer.Interval = 12000;
             HappinessTimer.Tick += HappinessTimer_Tick;
             // 
+            // btnExit
+            // 
+            btnExit.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnExit.Location = new Point(484, 37);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(60, 38);
+            btnExit.TabIndex = 13;
+            btnExit.Text = "EXIT";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(627, 536);
+            Controls.Add(btnExit);
             Controls.Add(btnPet);
             Controls.Add(btnPlay);
             Controls.Add(picMoods);
@@ -243,5 +256,6 @@
         private System.Windows.Forms.Timer FoodTimer;
         private System.Windows.Forms.Timer BathroomTimer;
         private System.Windows.Forms.Timer HappinessTimer;
+        private Button btnExit;
     }
 }

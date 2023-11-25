@@ -12,7 +12,7 @@ namespace FinalProjectITEC140
         Bitmap Happy = new Bitmap("../../../resources/HappyPikachu.jpg");
         Bitmap Nervous = new Bitmap("../../../resources/NervousPikachu.jpg");
         Bitmap Sad = new Bitmap("../../../resources/SadPikachu.jpg");
-
+        Bitmap Angry = new Bitmap("../../../resources/AngryPikachu.jpg");
         public Form1()
         {
             InitializeComponent();
@@ -40,13 +40,13 @@ namespace FinalProjectITEC140
 
         private void btnFeed_Click(object sender, EventArgs e)
         {
-            if (btnFeed.Enabled == true && prbHunger.Value < 90)
+            if (btnFeed.Enabled == true && prbHunger.Value < 60)
             {
                 prbHunger.Value += 10;
             }
-            else if (btnFeed.Enabled == true && prbHunger.Value > 90)
+            else if (btnFeed.Enabled == true && prbHunger.Value > 50)
             {
-                prbHunger.Value = 100;
+                prbHunger.Value = 60;
             }
         }
 
@@ -57,12 +57,12 @@ namespace FinalProjectITEC140
 
         private void btnPet_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnPlay_MouseDown(object sender, MouseEventArgs e)
@@ -129,6 +129,7 @@ namespace FinalProjectITEC140
         }
         private void FoodTimer_Tick(object sender, EventArgs e)
         {
+            hungry();
             if (prbHunger.Value > 0)
             {
                 prbHunger.Value -= 10;
@@ -145,7 +146,9 @@ namespace FinalProjectITEC140
             {
                 prbHealth.Value -= 0;
             }
-
+            nearingDeath();
+            TrainernearingDeath();
+            Death();
         }
 
         private void BathroomTimer_Tick(object sender, EventArgs e)
@@ -174,7 +177,9 @@ namespace FinalProjectITEC140
             {
                 prbHealth.Value -= 0;
             }
-
+            nearingDeath();
+            TrainernearingDeath();
+            Death();
         }
 
         private void HappinessTimer_Tick(object sender, EventArgs e)
@@ -195,8 +200,59 @@ namespace FinalProjectITEC140
             {
                 prbHealth.Value -= 0;
             }
-
+            nearingDeath();
+            TrainernearingDeath();
+            Death();
         }
 
+        void Death()
+        {
+            if (prbHealth.Value == 0)
+            {
+                picMoods.Image = Fainted;
+                prbHealth.Value = 0;
+                prbHappiness.Value = 0;
+                prbHunger.Value = 0;
+                prbPee.Value = 0;
+                MessageBox.Show("You let your Pikachu faint!");
+                FoodTimer.Enabled = false;
+                BathroomTimer.Enabled = false;
+                HappinessTimer.Enabled = false;
+                btnBathRoom.Enabled = false;
+                btnFeed.Enabled = false;
+                btnPlay.Enabled = false;
+                btnPet.Enabled = false;
+            }
+        }
+        void hungry() 
+        {
+            if (prbHunger.Value <= 40)
+            {
+                picMoods.Image = Hungry;
+            }
+            else 
+            {
+                picMoods.Image = Neutral;
+            }
+        }
+        void nearingDeath() 
+        {
+            if (prbHappiness.Value <= 30 && prbHunger.Value <= 20 && prbPee.Value >= 80) 
+            {
+                picMoods.Image = Nervous;
+            } 
+        }
+        void TrainernearingDeath() 
+        {
+            if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value == 100)
+            {
+                picMoods.Image = Angry;
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

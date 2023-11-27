@@ -20,7 +20,8 @@ namespace FinalProjectITEC140
             FoodTimer.Enabled = true;
             BathroomTimer.Enabled = true;
             HappinessTimer.Enabled = true;
-
+            prbTrainerHealth.Visible = false;
+            lblTrainerHealth.Visible = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -147,6 +148,7 @@ namespace FinalProjectITEC140
                 prbHealth.Value -= 0;
             }
             nearingDeath();
+            pikachuSad();
             TrainernearingDeath();
             Death();
         }
@@ -178,6 +180,7 @@ namespace FinalProjectITEC140
                 prbHealth.Value -= 0;
             }
             nearingDeath();
+            pikachuSad();
             TrainernearingDeath();
             Death();
         }
@@ -201,8 +204,19 @@ namespace FinalProjectITEC140
                 prbHealth.Value -= 0;
             }
             nearingDeath();
+            pikachuSad();
             TrainernearingDeath();
             Death();
+        }
+        private void BattleTImer_Tick(object sender, EventArgs e)
+        {
+            prbTrainerHealth.Value -= 25;
+            lblTrainerHealth.Text = "TRAINER HEALTH: " + prbTrainerHealth.Value.ToString();
+            if (prbTrainerHealth.Value == 0)
+            {
+                prbTrainerHealth.Value -= 0;
+                trainerDeath();
+            }
         }
 
         void Death()
@@ -224,35 +238,75 @@ namespace FinalProjectITEC140
                 btnPet.Enabled = false;
             }
         }
-        void hungry() 
+        void trainerDeath()
         {
-            if (prbHunger.Value <= 40)
+            FoodTimer.Enabled = false;
+            BathroomTimer.Enabled = false;
+            HappinessTimer.Enabled = false;
+            BattleTImer.Enabled = false;
+            btnBathRoom.Enabled = false;
+            btnFeed.Enabled = false;
+            btnPlay.Enabled = false;
+            btnPet.Enabled = false;
+            MessageBox.Show("Should look after your Pikachu better!");
+        }
+        void hungry()
+        {
+            if (prbHunger.Value <= 50)
             {
                 picMoods.Image = Hungry;
             }
-            else 
-            {
-                picMoods.Image = Neutral;
-            }
+
         }
-        void nearingDeath() 
+        void nearingDeath()
         {
-            if (prbHappiness.Value <= 30 && prbHunger.Value <= 20 && prbPee.Value >= 80) 
+            if (prbHappiness.Value <= 30 && prbHunger.Value <= 20 && prbPee.Value >= 80)
             {
                 picMoods.Image = Nervous;
-            } 
+            }
         }
-        void TrainernearingDeath() 
+        void TrainernearingDeath()
         {
-            if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value == 100)
+            if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value <= 75)
             {
                 picMoods.Image = Angry;
+                prbTrainerHealth.Visible = true;
+                lblTrainerHealth.Visible = true;
+                BattleTImer.Enabled = true;
+            }
+            else if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value > 75)
+            {
+                BattleTImer.Enabled = false;
+                prbTrainerHealth.Visible = true;
+                lblTrainerHealth.Visible = true;
+                pikachuSad();
+
+            }
+        }
+
+        void pikachuSad()
+        {
+            if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value > 75 && prbHealth.Value < 100)
+            {
+                picMoods.Image = Sad;
             }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnPotion_Click(object sender, EventArgs e)
+        {
+            if (btnPotion.Enabled == true && prbHealth.Value < 75)
+            {
+                prbHealth.Value += 25;
+            }
+            else if (btnPotion.Enabled == true && prbHealth.Value >= 75)
+            {
+                prbHealth.Value = 100;
+            }
         }
     }
 }

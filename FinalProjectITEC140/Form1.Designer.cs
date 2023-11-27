@@ -46,91 +46,104 @@
             BathroomTimer = new System.Windows.Forms.Timer(components);
             HappinessTimer = new System.Windows.Forms.Timer(components);
             btnExit = new Button();
+            prbTrainerHealth = new ProgressBar();
+            lblTrainerHealth = new Label();
+            BattleTImer = new System.Windows.Forms.Timer(components);
+            btnPotion = new Button();
             ((System.ComponentModel.ISupportInitialize)picMoods).BeginInit();
             SuspendLayout();
             // 
             // prbHealth
             // 
-            prbHealth.Location = new Point(194, 35);
+            prbHealth.Location = new Point(136, 21);
+            prbHealth.Margin = new Padding(2);
             prbHealth.Name = "prbHealth";
-            prbHealth.Size = new Size(260, 41);
+            prbHealth.Size = new Size(182, 25);
             prbHealth.TabIndex = 0;
             prbHealth.Value = 100;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(54, 35);
+            label1.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(38, 21);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(134, 35);
+            label1.Size = new Size(92, 23);
             label1.TabIndex = 1;
             label1.Text = "HEALTH:";
             label1.Click += label1_Click;
             // 
             // prbPee
             // 
-            prbPee.Location = new Point(194, 164);
+            prbPee.Location = new Point(136, 98);
+            prbPee.Margin = new Padding(2);
             prbPee.Name = "prbPee";
-            prbPee.Size = new Size(163, 34);
+            prbPee.Size = new Size(114, 20);
             prbPee.TabIndex = 2;
             prbPee.Value = 70;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(112, 163);
+            label2.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(78, 98);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(76, 35);
+            label2.Size = new Size(51, 23);
             label2.TabIndex = 3;
             label2.Text = "PEE:";
             // 
             // prbHunger
             // 
-            prbHunger.Location = new Point(194, 122);
+            prbHunger.Location = new Point(136, 73);
+            prbHunger.Margin = new Padding(2);
             prbHunger.Maximum = 60;
             prbHunger.Name = "prbHunger";
-            prbHunger.Size = new Size(217, 34);
+            prbHunger.Size = new Size(152, 20);
             prbHunger.Style = ProgressBarStyle.Continuous;
             prbHunger.TabIndex = 4;
-            prbHunger.Value = 40;
+            prbHunger.Value = 10;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(48, 124);
+            label3.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(34, 74);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(140, 35);
+            label3.Size = new Size(93, 23);
             label3.TabIndex = 5;
             label3.Text = "HUNGER:";
             label3.Click += label3_Click;
             // 
             // prbHappiness
             // 
-            prbHappiness.Location = new Point(194, 82);
+            prbHappiness.Location = new Point(136, 49);
+            prbHappiness.Margin = new Padding(2);
             prbHappiness.Name = "prbHappiness";
-            prbHappiness.Size = new Size(237, 34);
+            prbHappiness.Size = new Size(166, 20);
             prbHappiness.TabIndex = 6;
-            prbHappiness.Value = 80;
+            prbHappiness.Value = 10;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(12, 81);
+            label4.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(8, 49);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(176, 35);
+            label4.Size = new Size(119, 23);
             label4.TabIndex = 7;
             label4.Text = "HAPPINESS:";
             // 
             // btnFeed
             // 
-            btnFeed.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnFeed.Location = new Point(44, 217);
+            btnFeed.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnFeed.Location = new Point(31, 259);
+            btnFeed.Margin = new Padding(2);
             btnFeed.Name = "btnFeed";
-            btnFeed.Size = new Size(144, 82);
+            btnFeed.Size = new Size(101, 71);
             btnFeed.TabIndex = 8;
             btnFeed.Text = "FEED";
             btnFeed.UseVisualStyleBackColor = true;
@@ -140,10 +153,11 @@
             // 
             // btnBathRoom
             // 
-            btnBathRoom.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBathRoom.Location = new Point(44, 335);
+            btnBathRoom.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBathRoom.Location = new Point(31, 130);
+            btnBathRoom.Margin = new Padding(2);
             btnBathRoom.Name = "btnBathRoom";
-            btnBathRoom.Size = new Size(144, 82);
+            btnBathRoom.Size = new Size(101, 71);
             btnBathRoom.TabIndex = 9;
             btnBathRoom.Text = "TAKE OUTSIDE";
             btnBathRoom.UseVisualStyleBackColor = true;
@@ -153,7 +167,8 @@
             // 
             // picMoods
             // 
-            picMoods.Location = new Point(194, 217);
+            picMoods.Location = new Point(136, 130);
+            picMoods.Margin = new Padding(2);
             picMoods.Name = "picMoods";
             picMoods.Size = new Size(200, 200);
             picMoods.TabIndex = 10;
@@ -161,10 +176,11 @@
             // 
             // btnPlay
             // 
-            btnPlay.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPlay.Location = new Point(400, 217);
+            btnPlay.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPlay.Location = new Point(340, 259);
+            btnPlay.Margin = new Padding(2);
             btnPlay.Name = "btnPlay";
-            btnPlay.Size = new Size(144, 82);
+            btnPlay.Size = new Size(101, 71);
             btnPlay.TabIndex = 11;
             btnPlay.Text = "PLAY";
             btnPlay.UseVisualStyleBackColor = true;
@@ -174,10 +190,11 @@
             // 
             // btnPet
             // 
-            btnPet.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPet.Location = new Point(400, 335);
+            btnPet.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPet.Location = new Point(340, 130);
+            btnPet.Margin = new Padding(2);
             btnPet.Name = "btnPet";
-            btnPet.Size = new Size(144, 82);
+            btnPet.Size = new Size(101, 71);
             btnPet.TabIndex = 12;
             btnPet.Text = "PET";
             btnPet.UseVisualStyleBackColor = true;
@@ -202,20 +219,60 @@
             // 
             // btnExit
             // 
-            btnExit.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnExit.Location = new Point(484, 37);
+            btnExit.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnExit.Location = new Point(339, 22);
+            btnExit.Margin = new Padding(2);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(60, 38);
+            btnExit.Size = new Size(45, 23);
             btnExit.TabIndex = 13;
             btnExit.Text = "EXIT";
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
             // 
+            // prbTrainerHealth
+            // 
+            prbTrainerHealth.Location = new Point(243, 335);
+            prbTrainerHealth.Maximum = 150;
+            prbTrainerHealth.Name = "prbTrainerHealth";
+            prbTrainerHealth.Size = new Size(198, 23);
+            prbTrainerHealth.TabIndex = 14;
+            prbTrainerHealth.Value = 150;
+            // 
+            // lblTrainerHealth
+            // 
+            lblTrainerHealth.AutoSize = true;
+            lblTrainerHealth.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTrainerHealth.Location = new Point(32, 335);
+            lblTrainerHealth.Margin = new Padding(2, 0, 2, 0);
+            lblTrainerHealth.Name = "lblTrainerHealth";
+            lblTrainerHealth.Size = new Size(177, 23);
+            lblTrainerHealth.TabIndex = 15;
+            lblTrainerHealth.Text = "TRAINER HEALTH:";
+            // 
+            // BattleTImer
+            // 
+            BattleTImer.Interval = 5000;
+            BattleTImer.Tick += BattleTImer_Tick;
+            // 
+            // btnPotion
+            // 
+            btnPotion.Font = new Font("Showcard Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPotion.Location = new Point(31, 206);
+            btnPotion.Name = "btnPotion";
+            btnPotion.Size = new Size(100, 48);
+            btnPotion.TabIndex = 16;
+            btnPotion.Text = "POTION";
+            btnPotion.UseVisualStyleBackColor = true;
+            btnPotion.Click += btnPotion_Click;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(627, 536);
+            ClientSize = new Size(492, 403);
+            Controls.Add(btnPotion);
+            Controls.Add(lblTrainerHealth);
+            Controls.Add(prbTrainerHealth);
             Controls.Add(btnExit);
             Controls.Add(btnPet);
             Controls.Add(btnPlay);
@@ -230,6 +287,7 @@
             Controls.Add(prbPee);
             Controls.Add(label1);
             Controls.Add(prbHealth);
+            Margin = new Padding(2);
             Name = "Form1";
             Text = "Pikachu Petcare";
             Load += Form1_Load;
@@ -257,5 +315,9 @@
         private System.Windows.Forms.Timer BathroomTimer;
         private System.Windows.Forms.Timer HappinessTimer;
         private Button btnExit;
+        private ProgressBar prbTrainerHealth;
+        private Label lblTrainerHealth;
+        private System.Windows.Forms.Timer BattleTImer;
+        private Button btnPotion;
     }
 }

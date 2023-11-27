@@ -130,7 +130,7 @@ namespace FinalProjectITEC140
         }
         private void FoodTimer_Tick(object sender, EventArgs e)
         {
-            hungry();
+            pikachuHungry();
             if (prbHunger.Value > 0)
             {
                 prbHunger.Value -= 10;
@@ -147,7 +147,8 @@ namespace FinalProjectITEC140
             {
                 prbHealth.Value -= 0;
             }
-            nearingDeath();
+            pikachuExtatic();
+            pikachuNervous();
             pikachuSad();
             TrainernearingDeath();
             Death();
@@ -179,7 +180,8 @@ namespace FinalProjectITEC140
             {
                 prbHealth.Value -= 0;
             }
-            nearingDeath();
+            pikachuExtatic();
+            pikachuNervous();
             pikachuSad();
             TrainernearingDeath();
             Death();
@@ -203,14 +205,15 @@ namespace FinalProjectITEC140
             {
                 prbHealth.Value -= 0;
             }
-            nearingDeath();
+            pikachuExtatic();
+            pikachuNervous();
             pikachuSad();
             TrainernearingDeath();
             Death();
         }
         private void BattleTImer_Tick(object sender, EventArgs e)
         {
-            prbTrainerHealth.Value -= 25;
+            prbTrainerHealth.Value -= 20;
             lblTrainerHealth.Text = "TRAINER HEALTH: " + prbTrainerHealth.Value.ToString();
             if (prbTrainerHealth.Value == 0)
             {
@@ -236,6 +239,7 @@ namespace FinalProjectITEC140
                 btnFeed.Enabled = false;
                 btnPlay.Enabled = false;
                 btnPet.Enabled = false;
+                btnPotion.Enabled = false;
             }
         }
         void trainerDeath()
@@ -248,39 +252,37 @@ namespace FinalProjectITEC140
             btnFeed.Enabled = false;
             btnPlay.Enabled = false;
             btnPet.Enabled = false;
+            btnPotion.Enabled = false;
             MessageBox.Show("Should look after your Pikachu better!");
-        }
-        void hungry()
-        {
-            if (prbHunger.Value <= 50)
-            {
-                picMoods.Image = Hungry;
-            }
-
-        }
-        void nearingDeath()
-        {
-            if (prbHappiness.Value <= 30 && prbHunger.Value <= 20 && prbPee.Value >= 80)
-            {
-                picMoods.Image = Nervous;
-            }
         }
         void TrainernearingDeath()
         {
-            if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value <= 75)
+            if (prbHealth.Value <= 75)
             {
                 picMoods.Image = Angry;
                 prbTrainerHealth.Visible = true;
                 lblTrainerHealth.Visible = true;
                 BattleTImer.Enabled = true;
+                lblTrainerHealth.Text = "TRAINER HEALTH: " + prbTrainerHealth.Value.ToString();
             }
-            else if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value > 75)
+            else if (prbHealth.Value > 75)
             {
                 BattleTImer.Enabled = false;
-                prbTrainerHealth.Visible = true;
-                lblTrainerHealth.Visible = true;
-                pikachuSad();
+            }
+        }
+        void pikachuHungry()
+        {
+            if (prbHunger.Value <= 30)
+            {
+                picMoods.Image = Hungry;
+            }
 
+        }
+        void pikachuNervous()
+        {
+            if (prbHappiness.Value <= 30 && prbHunger.Value <= 20 && prbPee.Value >= 80)
+            {
+                picMoods.Image = Nervous;
             }
         }
 
@@ -290,11 +292,17 @@ namespace FinalProjectITEC140
             {
                 picMoods.Image = Sad;
             }
+            else
+            {
+                picMoods.Image = Neutral;
+            }
         }
-
-        private void btnExit_Click(object sender, EventArgs e)
+        void pikachuExtatic()
         {
-            this.Close();
+            if (prbHappiness.Value > 80 && prbHunger.Value > 40 && prbPee.Value < 70 && prbHealth.Value == 100)
+            {
+                picMoods.Image = Extatic;
+            }
         }
 
         private void btnPotion_Click(object sender, EventArgs e)
@@ -307,6 +315,11 @@ namespace FinalProjectITEC140
             {
                 prbHealth.Value = 100;
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

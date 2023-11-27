@@ -103,7 +103,7 @@
             prbHunger.Size = new Size(152, 20);
             prbHunger.Style = ProgressBarStyle.Continuous;
             prbHunger.TabIndex = 4;
-            prbHunger.Value = 10;
+            prbHunger.Value = 40;
             // 
             // label3
             // 
@@ -124,7 +124,7 @@
             prbHappiness.Name = "prbHappiness";
             prbHappiness.Size = new Size(166, 20);
             prbHappiness.TabIndex = 6;
-            prbHappiness.Value = 10;
+            prbHappiness.Value = 80;
             // 
             // label4
             // 
@@ -232,11 +232,11 @@
             // prbTrainerHealth
             // 
             prbTrainerHealth.Location = new Point(243, 335);
-            prbTrainerHealth.Maximum = 150;
+            prbTrainerHealth.Maximum = 160;
             prbTrainerHealth.Name = "prbTrainerHealth";
             prbTrainerHealth.Size = new Size(198, 23);
             prbTrainerHealth.TabIndex = 14;
-            prbTrainerHealth.Value = 150;
+            prbTrainerHealth.Value = 160;
             // 
             // lblTrainerHealth
             // 

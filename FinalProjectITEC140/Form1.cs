@@ -223,7 +223,7 @@ namespace FinalProjectITEC140
                 prbHappiness.Value = 0;
                 prbHunger.Value = 0;
                 prbPee.Value = 0;
-                MessageBox.Show("You let your Pikachu faint!");
+                MessageBox.Show("You let your Pokemon faint!");
                 FoodTimer.Enabled = false;
                 BathroomTimer.Enabled = false;
                 HappinessTimer.Enabled = false;
@@ -245,7 +245,7 @@ namespace FinalProjectITEC140
             btnPlay.Enabled = false;
             btnPet.Enabled = false;
             btnPotion.Enabled = false;
-            MessageBox.Show("Should look after your Pikachu better!");
+            MessageBox.Show("Should look after your Pokemon better!");
         }
         void TrainernearingDeath()
         {
@@ -257,7 +257,7 @@ namespace FinalProjectITEC140
                 BattleTImer.Enabled = true;
                 lblTrainerHealth.Text = "TRAINER HEALTH: " + prbTrainerHealth.Value.ToString();
             }
-            else if (prbHealth.Value <= 75 && picEvolution.Visible == true) 
+            else if (prbHealth.Value <= 75 && picEvolution.Visible == true)
             {
                 //picMoods.Image = Angry; needs to be a riachu image 
                 prbTrainerHealth.Visible = true;
@@ -269,6 +269,8 @@ namespace FinalProjectITEC140
             {
                 BattleTImer.Enabled = false;
             }
+            fight();
+            
         }
         void PokemonHungry()
         {
@@ -276,17 +278,21 @@ namespace FinalProjectITEC140
             {
                 picMoods.Image = Hungry;
             }
-            else if (prbHunger.Value <= 30 && picEvolution.Visible == true) 
+            else if (prbHunger.Value <= 30 && picEvolution.Visible == true)
             {
-                //angry raichu
+                //hungry raichu
             }
 
         }
-        void pikachuNervous()
+        void PokemonNervous()
         {
             if (prbHappiness.Value <= 30 && prbHunger.Value <= 20 && prbPee.Value >= 80)
             {
                 picMoods.Image = Nervous;
+            }
+            else if (prbHappiness.Value <= 30 && prbHunger.Value <= 20 && prbPee.Value >= 80 && picEvolution.Visible == true)
+            {
+                //nervous raichu
             }
         }
 
@@ -296,16 +302,20 @@ namespace FinalProjectITEC140
             {
                 picMoods.Image = Sad;
             }
-            else
+            else if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == true)
             {
-                picMoods.Image = Neutral;
+                //sad raichu
             }
         }
-        void pikachuExtatic()
+        void PokemonExtatic()
         {
             if (prbHappiness.Value > 80 && prbHunger.Value > 40 && prbPee.Value < 70 && prbHealth.Value == 100)
             {
                 picMoods.Image = Extatic;
+            }
+            else if (prbHappiness.Value > 80 && prbHunger.Value > 40 && prbPee.Value < 70 && prbHealth.Value == 100 && picEvolution.Visible == true)
+            {
+                //extactic raichu
             }
         }
 
@@ -332,11 +342,15 @@ namespace FinalProjectITEC140
             {
                 MessageBox.Show("Your Pikachu is EVOLVING!");
                 picEvolution.Visible = true;
-                if (picEvolution.Visible == true) 
+                if (picEvolution.Visible == true)
                 {
                     GameTimer.Enabled = false;
                 }
             }
+        }
+        void fight()
+        {
+           
         }
     }
 }

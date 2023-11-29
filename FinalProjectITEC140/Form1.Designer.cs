@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             prbHealth = new ProgressBar();
             label1 = new Label();
             prbPee = new ProgressBar();
@@ -275,11 +276,11 @@
             // 
             // picEvolution
             // 
+            picEvolution.BackgroundImage = (Image)resources.GetObject("picEvolution.BackgroundImage");
             picEvolution.BackgroundImageLayout = ImageLayout.Stretch;
-            picEvolution.Image = Properties.Resources.Evolution;
-            picEvolution.Location = new Point(339, 204);
+            picEvolution.Location = new Point(340, 80);
             picEvolution.Name = "picEvolution";
-            picEvolution.Size = new Size(100, 50);
+            picEvolution.Size = new Size(48, 45);
             picEvolution.TabIndex = 17;
             picEvolution.TabStop = false;
             picEvolution.Visible = false;
@@ -309,7 +310,7 @@
             Controls.Add(prbHealth);
             Margin = new Padding(2);
             Name = "Form1";
-            Text = "Pikachu Petcare";
+            Text = "Pokemon Petcare";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)picMoods).EndInit();
             ((System.ComponentModel.ISupportInitialize)picEvolution).EndInit();

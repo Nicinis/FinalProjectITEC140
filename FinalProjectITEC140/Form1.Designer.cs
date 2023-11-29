@@ -275,6 +275,8 @@
             // 
             // picEvolution
             // 
+            picEvolution.BackgroundImageLayout = ImageLayout.Stretch;
+            picEvolution.Image = Properties.Resources.Evolution;
             picEvolution.Location = new Point(339, 204);
             picEvolution.Name = "picEvolution";
             picEvolution.Size = new Size(100, 50);

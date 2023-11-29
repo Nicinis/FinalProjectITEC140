@@ -1,3 +1,4 @@
+using System.ComponentModel.Design;
 using System.Runtime.Versioning;
 
 namespace FinalProjectITEC140
@@ -274,6 +275,10 @@ namespace FinalProjectITEC140
             if (prbHunger.Value <= 30)
             {
                 picMoods.Image = Hungry;
+            }
+            else if (prbHunger.Value <= 30 && picEvolution.Visible == true) 
+            {
+                //angry raichu
             }
 
         }

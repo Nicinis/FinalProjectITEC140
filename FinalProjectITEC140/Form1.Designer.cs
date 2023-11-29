@@ -50,7 +50,10 @@
             lblTrainerHealth = new Label();
             BattleTImer = new System.Windows.Forms.Timer(components);
             btnPotion = new Button();
+            GameTimer = new System.Windows.Forms.Timer(components);
+            picEvolution = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picMoods).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picEvolution).BeginInit();
             SuspendLayout();
             // 
             // prbHealth
@@ -265,11 +268,26 @@
             btnPotion.UseVisualStyleBackColor = true;
             btnPotion.Click += btnPotion_Click;
             // 
+            // GameTimer
+            // 
+            GameTimer.Interval = 240000;
+            GameTimer.Tick += GameTimer_Tick;
+            // 
+            // picEvolution
+            // 
+            picEvolution.Location = new Point(339, 204);
+            picEvolution.Name = "picEvolution";
+            picEvolution.Size = new Size(100, 50);
+            picEvolution.TabIndex = 17;
+            picEvolution.TabStop = false;
+            picEvolution.Visible = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(492, 403);
+            Controls.Add(picEvolution);
             Controls.Add(btnPotion);
             Controls.Add(lblTrainerHealth);
             Controls.Add(prbTrainerHealth);
@@ -292,6 +310,7 @@
             Text = "Pikachu Petcare";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)picMoods).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picEvolution).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -319,5 +338,7 @@
         private Label lblTrainerHealth;
         private System.Windows.Forms.Timer BattleTImer;
         private Button btnPotion;
+        private System.Windows.Forms.Timer GameTimer;
+        private PictureBox picEvolution;
     }
 }

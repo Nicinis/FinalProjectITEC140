@@ -20,6 +20,7 @@ namespace FinalProjectITEC140
             FoodTimer.Enabled = true;
             BathroomTimer.Enabled = true;
             HappinessTimer.Enabled = true;
+            GameTimer.Enabled = true;
             prbTrainerHealth.Visible = false;
             lblTrainerHealth.Visible = false;
         }
@@ -130,7 +131,6 @@ namespace FinalProjectITEC140
         }
         private void FoodTimer_Tick(object sender, EventArgs e)
         {
-            pikachuHungry();
             if (prbHunger.Value > 0)
             {
                 prbHunger.Value -= 10;
@@ -147,9 +147,6 @@ namespace FinalProjectITEC140
             {
                 prbHealth.Value -= 0;
             }
-            pikachuExtatic();
-            pikachuNervous();
-            pikachuSad();
             TrainernearingDeath();
             Death();
         }
@@ -180,9 +177,6 @@ namespace FinalProjectITEC140
             {
                 prbHealth.Value -= 0;
             }
-            pikachuExtatic();
-            pikachuNervous();
-            pikachuSad();
             TrainernearingDeath();
             Death();
         }
@@ -205,9 +199,6 @@ namespace FinalProjectITEC140
             {
                 prbHealth.Value -= 0;
             }
-            pikachuExtatic();
-            pikachuNervous();
-            pikachuSad();
             TrainernearingDeath();
             Death();
         }
@@ -265,12 +256,20 @@ namespace FinalProjectITEC140
                 BattleTImer.Enabled = true;
                 lblTrainerHealth.Text = "TRAINER HEALTH: " + prbTrainerHealth.Value.ToString();
             }
+            else if (prbHealth.Value <= 75 && picEvolution.Visible == true) 
+            {
+                //picMoods.Image = Angry; needs to be a riachu image 
+                prbTrainerHealth.Visible = true;
+                lblTrainerHealth.Visible = true;
+                BattleTImer.Enabled = true;
+                lblTrainerHealth.Text = "TRAINER HEALTH: " + prbTrainerHealth.Value.ToString();
+            }
             else if (prbHealth.Value > 75)
             {
                 BattleTImer.Enabled = false;
             }
         }
-        void pikachuHungry()
+        void PokemonHungry()
         {
             if (prbHunger.Value <= 30)
             {
@@ -320,6 +319,19 @@ namespace FinalProjectITEC140
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void GameTimer_Tick(object sender, EventArgs e)
+        {
+            if (prbHealth.Value > 90 && prbHappiness.Value > 85 && prbHunger.Value > 40 && prbPee.Value < 40)
+            {
+                MessageBox.Show("Your Pikachu is EVOLVING!");
+                picEvolution.Visible = true;
+                if (picEvolution.Visible == true) 
+                {
+                    GameTimer.Enabled = false;
+                }
+            }
         }
     }
 }

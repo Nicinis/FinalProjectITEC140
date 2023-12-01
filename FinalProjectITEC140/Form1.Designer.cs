@@ -121,6 +121,7 @@
             // 
             prbHappiness.Location = new Point(194, 110);
             prbHappiness.Name = "prbHappiness";
+            prbHappiness.RightToLeft = RightToLeft.No;
             prbHappiness.Size = new Size(237, 33);
             prbHappiness.TabIndex = 6;
             prbHappiness.Value = 80;
@@ -137,26 +138,30 @@
             // 
             // btnFeed
             // 
+            btnFeed.BackColor = Color.Blue;
+            btnFeed.FlatStyle = FlatStyle.Popup;
             btnFeed.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnFeed.Location = new Point(148, 244);
+            btnFeed.Location = new Point(271, 244);
             btnFeed.Name = "btnFeed";
             btnFeed.Size = new Size(117, 85);
             btnFeed.TabIndex = 8;
             btnFeed.Text = "FEED";
-            btnFeed.UseVisualStyleBackColor = true;
+            btnFeed.UseVisualStyleBackColor = false;
             btnFeed.Click += btnFeed_Click;
             btnFeed.MouseDown += btnFeed_MouseDown;
             btnFeed.MouseUp += btnFeed_MouseUp;
             // 
             // btnBathRoom
             // 
+            btnBathRoom.BackColor = Color.Blue;
+            btnBathRoom.FlatStyle = FlatStyle.Popup;
             btnBathRoom.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnBathRoom.Location = new Point(394, 242);
+            btnBathRoom.Location = new Point(394, 244);
             btnBathRoom.Name = "btnBathRoom";
             btnBathRoom.Size = new Size(117, 87);
             btnBathRoom.TabIndex = 9;
             btnBathRoom.Text = "TAKE OUTSIDE";
-            btnBathRoom.UseVisualStyleBackColor = true;
+            btnBathRoom.UseVisualStyleBackColor = false;
             btnBathRoom.Click += btnBathRoom_Click;
             btnBathRoom.MouseDown += btnBathRoom_MouseDown;
             btnBathRoom.MouseUp += btnBathRoom_MouseUp;
@@ -171,26 +176,31 @@
             // 
             // btnPlay
             // 
+            btnPlay.BackColor = Color.Blue;
+            btnPlay.FlatStyle = FlatStyle.Popup;
             btnPlay.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnPlay.Location = new Point(271, 242);
+            btnPlay.Location = new Point(148, 244);
             btnPlay.Name = "btnPlay";
             btnPlay.Size = new Size(117, 87);
             btnPlay.TabIndex = 11;
             btnPlay.Text = "PLAY";
-            btnPlay.UseVisualStyleBackColor = true;
+            btnPlay.UseVisualStyleBackColor = false;
             btnPlay.Click += btnPlay_Click;
             btnPlay.MouseDown += btnPlay_MouseDown;
             btnPlay.MouseUp += btnPlay_MouseUp;
             // 
             // btnPet
             // 
+            btnPet.BackColor = Color.Blue;
+            btnPet.BackgroundImageLayout = ImageLayout.None;
+            btnPet.FlatStyle = FlatStyle.Popup;
             btnPet.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnPet.Location = new Point(25, 244);
             btnPet.Name = "btnPet";
-            btnPet.Size = new Size(117, 86);
+            btnPet.Size = new Size(117, 87);
             btnPet.TabIndex = 12;
             btnPet.Text = "PET";
-            btnPet.UseVisualStyleBackColor = true;
+            btnPet.UseVisualStyleBackColor = false;
             btnPet.Click += btnPet_Click;
             btnPet.MouseDown += btnPet_MouseDown;
             btnPet.MouseUp += btnPet_MouseUp;
@@ -212,13 +222,15 @@
             // 
             // btnExit
             // 
+            btnExit.BackColor = Color.Blue;
+            btnExit.FlatStyle = FlatStyle.Popup;
             btnExit.Font = new Font("Showcard Gothic", 8F, FontStyle.Regular, GraphicsUnit.Point);
             btnExit.Location = new Point(558, 19);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(77, 38);
             btnExit.TabIndex = 13;
             btnExit.Text = "EXIT";
-            btnExit.UseVisualStyleBackColor = true;
+            btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
             // 
             // prbTrainerHealth
@@ -235,7 +247,7 @@
             // 
             lblTrainerHealth.AutoSize = true;
             lblTrainerHealth.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTrainerHealth.Location = new Point(66, 338);
+            lblTrainerHealth.Location = new Point(49, 338);
             lblTrainerHealth.Name = "lblTrainerHealth";
             lblTrainerHealth.Size = new Size(258, 35);
             lblTrainerHealth.TabIndex = 15;
@@ -249,6 +261,8 @@
             // 
             // btnPotion
             // 
+            btnPotion.BackColor = Color.Blue;
+            btnPotion.FlatStyle = FlatStyle.Popup;
             btnPotion.Font = new Font("Showcard Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point);
             btnPotion.Location = new Point(518, 244);
             btnPotion.Margin = new Padding(4, 5, 4, 5);
@@ -256,12 +270,12 @@
             btnPotion.Size = new Size(117, 84);
             btnPotion.TabIndex = 16;
             btnPotion.Text = "POTION";
-            btnPotion.UseVisualStyleBackColor = true;
+            btnPotion.UseVisualStyleBackColor = false;
             btnPotion.Click += btnPotion_Click;
             // 
             // GameTimer
             // 
-            GameTimer.Interval = 240000;
+            GameTimer.Interval = 180000;
             GameTimer.Tick += GameTimer_Tick;
             // 
             // picEvolution
@@ -278,31 +292,36 @@
             // 
             // btnCredit
             // 
+            btnCredit.BackColor = Color.Blue;
+            btnCredit.FlatStyle = FlatStyle.Popup;
             btnCredit.Font = new Font("Showcard Gothic", 8F, FontStyle.Regular, GraphicsUnit.Point);
             btnCredit.Location = new Point(475, 19);
             btnCredit.Name = "btnCredit";
             btnCredit.Size = new Size(77, 38);
             btnCredit.TabIndex = 18;
             btnCredit.Text = "Credit";
-            btnCredit.UseVisualStyleBackColor = true;
+            btnCredit.UseVisualStyleBackColor = false;
             btnCredit.Click += btnCredit_Click;
             // 
             // btnHelp
             // 
+            btnHelp.BackColor = Color.Blue;
+            btnHelp.FlatStyle = FlatStyle.Popup;
             btnHelp.Font = new Font("Showcard Gothic", 8F, FontStyle.Regular, GraphicsUnit.Point);
             btnHelp.Location = new Point(395, 19);
             btnHelp.Name = "btnHelp";
             btnHelp.Size = new Size(77, 38);
             btnHelp.TabIndex = 19;
             btnHelp.Text = "Help";
-            btnHelp.UseVisualStyleBackColor = true;
+            btnHelp.UseVisualStyleBackColor = false;
             btnHelp.Click += btnHelp_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(652, 403);
+            BackColor = Color.DarkRed;
+            ClientSize = new Size(655, 387);
             Controls.Add(btnHelp);
             Controls.Add(btnCredit);
             Controls.Add(picEvolution);

@@ -205,6 +205,8 @@ namespace FinalProjectITEC140
             {
                 prbHealth.Value -= 0;
             }
+            pokemonNervous();
+            pokemonSad();
             TrainernearingDeath();
             Death();
         }
@@ -235,6 +237,8 @@ namespace FinalProjectITEC140
             {
                 prbHealth.Value -= 0;
             }
+            pokemonNervous();
+            pokemonSad();
             TrainernearingDeath();
             Death();
         }
@@ -257,17 +261,31 @@ namespace FinalProjectITEC140
             {
                 prbHealth.Value -= 0;
             }
+            pokemonNervous();
+            pokemonSad();
             TrainernearingDeath();
             Death();
         }
         private void BattleTImer_Tick(object sender, EventArgs e)
         {
-            prbTrainerHealth.Value -= 20;
             lblTrainerHealth.Text = "TRAINER HEALTH: " + prbTrainerHealth.Value.ToString();
-            if (prbTrainerHealth.Value == 0)
+            if (picEvolution.Visible == true)
             {
-                prbTrainerHealth.Value -= 0;
-                trainerDeath();
+                prbTrainerHealth.Value -= 20;
+                if (prbTrainerHealth.Value == 0)
+                {
+                    prbTrainerHealth.Value -= 0;
+                    trainerDeath();
+                }
+            }
+            else if (picEvolution.Visible == false)
+            {
+                prbTrainerHealth.Value -= 10;
+                if (prbTrainerHealth.Value == 0)
+                {
+                    prbTrainerHealth.Value -= 0;
+                    trainerDeath();
+                }
             }
         }
 
@@ -343,29 +361,28 @@ namespace FinalProjectITEC140
             {
                 BattleTImer.Enabled = false;
             }
-            fight();
 
         }
 
-        void PokemonNervous()
+        void pokemonNervous()
         {
-            if (prbHappiness.Value <= 30 && prbHunger.Value <= 20 && prbPee.Value >= 80)
+            if (prbHappiness.Value <= 50 || prbHunger.Value <= 20 || prbPee.Value >= 70 && picEvolution.Visible == false)
             {
                 picMoods.Image = NervousPika;
             }
-            else if (prbHappiness.Value <= 30 && prbHunger.Value <= 20 && prbPee.Value >= 80 && picEvolution.Visible == true)
+            else if (prbHappiness.Value <= 60 || prbHunger.Value <= 20 || prbPee.Value >= 70 && picEvolution.Visible == true)
             {
                 picMoods.Image = NervousRaichu;
             }
         }
 
-        void pikachuSad()
+        void pokemonSad()
         {
-            if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value > 75 && prbHealth.Value < 100)
+            if (prbHappiness.Value == 0 || prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == false)
             {
                 picMoods.Image = SadPika;
             }
-            else if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == true)
+            else if (prbHappiness.Value == 0 || prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == true)
             {
                 picMoods.Image = SadRaichu;
             }
@@ -394,13 +411,25 @@ namespace FinalProjectITEC140
             {
                 MessageBox.Show("Your Pikachu is EVOLVING!");
                 picEvolution.Visible = true;
+                picMoods.Image = NeutralRaichu;
                 if (picEvolution.Visible == true)
                 {
                     GameTimer.Enabled = false;
                 }
             }
         }
-        void fight()
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Naturally you have to look after your pets. Taking them to the BATHROOM and making sure they stay FED and HAPPY. If not you pokemon just might become upset with you!");
+        }
+
+        private void btnCredit_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Created by NicK Z.");
+        }
+
+        private void lblTrainerHealth_Click(object sender, EventArgs e)
         {
 
         }

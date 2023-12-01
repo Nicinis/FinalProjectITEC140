@@ -336,7 +336,10 @@ namespace FinalProjectITEC140
                 FoodTimer.Enabled = false;
                 BathroomTimer.Enabled = false;
                 HappinessTimer.Enabled = false;
+                BattleTImer.Enabled = false;
+                GameTimer.Enabled = false;
                 btnBathRoom.Enabled = false;
+                btnHelp.Enabled = false;
                 btnFeed.Enabled = false;
                 btnPlay.Enabled = false;
                 btnPet.Enabled = false;
@@ -353,7 +356,10 @@ namespace FinalProjectITEC140
                 FoodTimer.Enabled = false;
                 BathroomTimer.Enabled = false;
                 HappinessTimer.Enabled = false;
+                BattleTImer.Enabled = false;
+                GameTimer.Enabled = false;
                 btnBathRoom.Enabled = false;
+                btnHelp.Enabled = false;
                 btnFeed.Enabled = false;
                 btnPlay.Enabled = false;
                 btnPet.Enabled = false;
@@ -366,6 +372,8 @@ namespace FinalProjectITEC140
             BathroomTimer.Enabled = false;
             HappinessTimer.Enabled = false;
             BattleTImer.Enabled = false;
+            GameTimer.Enabled = false;
+            btnHelp.Enabled = false;
             btnBathRoom.Enabled = false;
             btnFeed.Enabled = false;
             btnPlay.Enabled = false;
@@ -422,11 +430,11 @@ namespace FinalProjectITEC140
 
         void PokemonSad()
         {
-            if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value > 80 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == false)
+            if ((prbHappiness.Value == 0 || prbHunger.Value == 0) && prbPee.Value > 80 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == false)
             {
                 picMoods.Image = SadPika;
             }
-            else if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value > 80 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == true)
+            else if ((prbHappiness.Value == 0 || prbHunger.Value == 0) && prbPee.Value > 80 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == true)
             {
                 picMoods.Image = SadRaichu;
             }
@@ -471,6 +479,10 @@ namespace FinalProjectITEC140
             {
                 prbHealth.Value = 100;
             }
+            PokemonHappy();
+            PokemonNeutral();
+            PokemonNervous();
+            PokemonSad();
         }
         private void GameTimer_Tick(object sender, EventArgs e)
         {
@@ -507,9 +519,9 @@ namespace FinalProjectITEC140
                 MessageBox.Show("Shame on you for leaving your Pokemon behind!");
                 this.Close();
             }
-            else 
+            else
             {
-                this.Close();   
+                this.Close();
             }
         }
     }

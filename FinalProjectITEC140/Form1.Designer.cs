@@ -138,7 +138,7 @@
             // 
             // btnFeed
             // 
-            btnFeed.BackColor = Color.Blue;
+            btnFeed.BackColor = Color.Yellow;
             btnFeed.FlatStyle = FlatStyle.Popup;
             btnFeed.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnFeed.Location = new Point(271, 244);
@@ -153,7 +153,7 @@
             // 
             // btnBathRoom
             // 
-            btnBathRoom.BackColor = Color.Blue;
+            btnBathRoom.BackColor = Color.Yellow;
             btnBathRoom.FlatStyle = FlatStyle.Popup;
             btnBathRoom.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnBathRoom.Location = new Point(394, 244);
@@ -176,7 +176,7 @@
             // 
             // btnPlay
             // 
-            btnPlay.BackColor = Color.Blue;
+            btnPlay.BackColor = Color.Yellow;
             btnPlay.FlatStyle = FlatStyle.Popup;
             btnPlay.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnPlay.Location = new Point(148, 244);
@@ -191,7 +191,7 @@
             // 
             // btnPet
             // 
-            btnPet.BackColor = Color.Blue;
+            btnPet.BackColor = Color.Yellow;
             btnPet.BackgroundImageLayout = ImageLayout.None;
             btnPet.FlatStyle = FlatStyle.Popup;
             btnPet.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
@@ -222,7 +222,7 @@
             // 
             // btnExit
             // 
-            btnExit.BackColor = Color.Blue;
+            btnExit.BackColor = Color.FromArgb(0, 192, 0);
             btnExit.FlatStyle = FlatStyle.Popup;
             btnExit.Font = new Font("Showcard Gothic", 8F, FontStyle.Regular, GraphicsUnit.Point);
             btnExit.Location = new Point(558, 19);
@@ -261,7 +261,7 @@
             // 
             // btnPotion
             // 
-            btnPotion.BackColor = Color.Blue;
+            btnPotion.BackColor = Color.Yellow;
             btnPotion.FlatStyle = FlatStyle.Popup;
             btnPotion.Font = new Font("Showcard Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point);
             btnPotion.Location = new Point(518, 244);
@@ -275,7 +275,7 @@
             // 
             // GameTimer
             // 
-            GameTimer.Interval = 30000;
+            GameTimer.Interval = 15000;
             GameTimer.Tick += GameTimer_Tick;
             // 
             // picEvolution
@@ -292,7 +292,7 @@
             // 
             // btnCredit
             // 
-            btnCredit.BackColor = Color.Blue;
+            btnCredit.BackColor = Color.FromArgb(0, 192, 0);
             btnCredit.FlatStyle = FlatStyle.Popup;
             btnCredit.Font = new Font("Showcard Gothic", 8F, FontStyle.Regular, GraphicsUnit.Point);
             btnCredit.Location = new Point(475, 19);
@@ -305,7 +305,7 @@
             // 
             // btnHelp
             // 
-            btnHelp.BackColor = Color.Blue;
+            btnHelp.BackColor = Color.FromArgb(0, 192, 0);
             btnHelp.FlatStyle = FlatStyle.Popup;
             btnHelp.Font = new Font("Showcard Gothic", 8F, FontStyle.Regular, GraphicsUnit.Point);
             btnHelp.Location = new Point(395, 19);

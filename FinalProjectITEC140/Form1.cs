@@ -96,6 +96,9 @@ namespace FinalProjectITEC140
             }
             Battle();
             PokemonHappy();
+            PokemonNeutral();
+            pokemonNervous();
+            pokemonSad();
         }
 
         private void btnPlay_MouseUp(object sender, MouseEventArgs e)
@@ -110,6 +113,9 @@ namespace FinalProjectITEC140
             }
             Battle();
             PokemonHappy();
+            PokemonNeutral();
+            pokemonNervous();
+            pokemonSad();
 
         }
 
@@ -137,7 +143,8 @@ namespace FinalProjectITEC140
                 picMoods.Image = PoopinRaichu;
             }
             Battle();
-            PokemonHappy();
+            pokemonNervous();
+            pokemonSad();
         }
 
         private void btnBathRoom_MouseUp(object sender, MouseEventArgs e)
@@ -152,6 +159,9 @@ namespace FinalProjectITEC140
             }
             Battle();
             PokemonHappy();
+            PokemonNeutral();
+            pokemonNervous();
+            pokemonSad();
         }
         private void btnPet_MouseDown(object sender, MouseEventArgs e)
         {
@@ -177,6 +187,9 @@ namespace FinalProjectITEC140
             }
             Battle();
             PokemonHappy();
+            PokemonNeutral();
+            pokemonNervous();
+            pokemonSad();
 
         }
 
@@ -192,6 +205,9 @@ namespace FinalProjectITEC140
             }
             Battle();
             PokemonHappy();
+            PokemonNeutral();
+            pokemonNervous();
+            pokemonSad();
         }
 
         private void btnFeed_MouseDown(object sender, MouseEventArgs e)
@@ -224,6 +240,7 @@ namespace FinalProjectITEC140
             pokemonNervous();
             pokemonSad();
             PokemonHappy();
+            PokemonNeutral();
             TrainernearingDeath();
             Death();
         }
@@ -257,6 +274,7 @@ namespace FinalProjectITEC140
             pokemonNervous();
             pokemonSad();
             PokemonHappy();
+            PokemonNeutral();
             TrainernearingDeath();
             Death();
         }
@@ -282,6 +300,7 @@ namespace FinalProjectITEC140
             pokemonNervous();
             pokemonSad();
             PokemonHappy();
+            PokemonNeutral();
             TrainernearingDeath();
             Death();
         }
@@ -383,14 +402,24 @@ namespace FinalProjectITEC140
             }
 
         }
-
+        void PokemonNeutral() 
+        {
+            if (prbHappiness.Value > 60 && prbHappiness.Value < 85 || prbHunger.Value > 20 && prbHunger.Value < 40 && prbPee.Value < 60 && prbPee.Value > 40 && picEvolution.Visible == false)
+            {
+                picMoods.Image = NeutralPika;
+            }
+            else if (prbHappiness.Value > 60 && prbHappiness.Value < 85 || prbHunger.Value > 20 && prbHunger.Value < 40 && prbPee.Value < 60 && prbPee.Value > 40 && picEvolution.Visible == true)
+            {
+                picMoods.Image= NeutralRaichu;
+            }
+        }
         void pokemonNervous()
         {
-            if (prbHappiness.Value <= 60 || prbHunger.Value <= 20 || prbPee.Value >= 70 && picEvolution.Visible == false)
+            if (prbHappiness.Value <= 60 || prbHunger.Value <= 20 && prbPee.Value >= 60 && picEvolution.Visible == false)
             {
                 picMoods.Image = NervousPika;
             }
-            else if (prbHappiness.Value <= 60 || prbHunger.Value <= 20 || prbPee.Value >= 70 && picEvolution.Visible == true)
+            else if (prbHappiness.Value <= 60 || prbHunger.Value <= 20 && prbPee.Value >= 60 && picEvolution.Visible == true)
             {
                 picMoods.Image = NervousRaichu;
             }
@@ -398,22 +427,22 @@ namespace FinalProjectITEC140
 
         void pokemonSad()
         {
-            if (prbHappiness.Value == 0 || prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == false)
+            if (prbHappiness.Value == 0 || prbHunger.Value == 0 && prbPee.Value > 80 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == false)
             {
                 picMoods.Image = SadPika;
             }
-            else if (prbHappiness.Value == 0 || prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == true)
+            else if (prbHappiness.Value == 0 || prbHunger.Value == 0 && prbPee.Value > 80 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == true)
             {
                 picMoods.Image = SadRaichu;
             }
         }
         void PokemonHappy() 
         {
-            if (prbHealth.Value > 90 && prbHappiness.Value > 85 && prbHunger.Value > 40 && prbPee.Value < 40 && picEvolution.Visible == false)
+            if (prbHealth.Value >= 90 && prbHappiness.Value >= 85 && prbHunger.Value >= 40 && prbPee.Value <= 40 && picEvolution.Visible == false)
             {
                 picMoods.Image = HappyPika;
             }
-            else if (prbHealth.Value > 90 && prbHappiness.Value > 85 && prbHunger.Value > 40 && prbPee.Value < 40 && picEvolution.Visible == true) 
+            else if (prbHealth.Value >= 90 && prbHappiness.Value >= 85 && prbHunger.Value >= 40 && prbPee.Value <= 40 && picEvolution.Visible == true) 
             {
                 picMoods.Image = HappyRaichu;
             }
@@ -445,7 +474,7 @@ namespace FinalProjectITEC140
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Naturally you have to look after your pets. Taking them to the BATHROOM and making sure they stay FED and HAPPY. If not you pokemon just might become upset with you!");
+            MessageBox.Show("Naturally you have to look after your pets. Taking them to the BATHROOM and making sure they stay FED and HAPPY. If not, your Pokemon just might become upset with you!");
         }
 
         private void btnCredit_Click(object sender, EventArgs e)

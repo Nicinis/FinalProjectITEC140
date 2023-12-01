@@ -275,7 +275,7 @@
             // 
             // GameTimer
             // 
-            GameTimer.Interval = 15000;
+            GameTimer.Interval = 120000;
             GameTimer.Tick += GameTimer_Tick;
             // 
             // picEvolution

@@ -47,7 +47,7 @@ namespace FinalProjectITEC140
 
         private void btnFeed_Click(object sender, EventArgs e)
         {
-            if (btnFeed.Enabled == true && prbHunger.Value < 60)
+            if (btnFeed.Enabled == true && prbHunger.Value < 40)
             {
                 prbHunger.Value += 20;
             }

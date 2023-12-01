@@ -342,6 +342,7 @@
             Controls.Add(prbPee);
             Controls.Add(label1);
             Controls.Add(prbHealth);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Pokemon Petcare";
             Load += Form1_Load;

@@ -147,20 +147,38 @@ namespace FinalProjectITEC140
         }
         private void btnPet_MouseDown(object sender, MouseEventArgs e)
         {
-            if (btnPet.Enabled == true && prbHappiness.Value < 100)
+            if (btnPet.Enabled == true && prbHappiness.Value < 100 && picEvolution.Visible == false)
             {
                 prbHappiness.Value += 5;
+                picMoods.Image = HappyPika;
             }
-            else if (btnPet.Enabled == true && prbHappiness.Value > 95)
+            else if (btnPet.Enabled == true && prbHappiness.Value > 95 && picEvolution.Visible == false)
             {
                 prbHappiness.Value = 100;
+                picMoods.Image = HappyPika;
             }
-            picMoods.Image = HappyPika;
+            else if (btnPet.Enabled == true && prbHappiness.Value < 100 && picEvolution.Visible == true)
+            {
+                prbHappiness.Value += 5;
+                picMoods.Image = HappyRaichu;
+            }
+            else if (btnPet.Enabled == true && prbHappiness.Value > 95 && picEvolution.Visible == true) 
+            {
+                prbHappiness.Value = 100;
+                picMoods.Image = HappyRaichu;
+            }
         }
 
         private void btnPet_MouseUp(object sender, MouseEventArgs e)
         {
-            picMoods.Image = NeutralPika;
+            if (picEvolution.Visible == true)
+            {
+                picMoods.Image = NeutralRaichu;
+            }
+            else
+            {
+                picMoods.Image = NeutralPika;
+            }
         }
 
         private void btnFeed_MouseDown(object sender, MouseEventArgs e)
@@ -258,9 +276,26 @@ namespace FinalProjectITEC140
 
         void Death()
         {
-            if (prbHealth.Value == 0)
+            if (prbHealth.Value == 0 && picEvolution.Visible == false)
             {
                 picMoods.Image = FaintedPika;
+                prbHealth.Value = 0;
+                prbHappiness.Value = 0;
+                prbHunger.Value = 0;
+                prbPee.Value = 0;
+                MessageBox.Show("You let your Pokemon faint!");
+                FoodTimer.Enabled = false;
+                BathroomTimer.Enabled = false;
+                HappinessTimer.Enabled = false;
+                btnBathRoom.Enabled = false;
+                btnFeed.Enabled = false;
+                btnPlay.Enabled = false;
+                btnPet.Enabled = false;
+                btnPotion.Enabled = false;
+            }
+            else if (prbHealth.Value == 0 && picEvolution.Visible == true) 
+            {
+                picMoods.Image = FaintedRaichu;
                 prbHealth.Value = 0;
                 prbHappiness.Value = 0;
                 prbHunger.Value = 0;
@@ -301,7 +336,7 @@ namespace FinalProjectITEC140
             }
             else if (prbHealth.Value <= 75 && picEvolution.Visible == true)
             {
-                //picMoods.Image = Angry; needs to be a riachu image 
+                picMoods.Image = AngryRaichu; 
                 prbTrainerHealth.Visible = true;
                 lblTrainerHealth.Visible = true;
                 BattleTImer.Enabled = true;
@@ -323,7 +358,7 @@ namespace FinalProjectITEC140
             }
             else if (prbHappiness.Value <= 30 && prbHunger.Value <= 20 && prbPee.Value >= 80 && picEvolution.Visible == true)
             {
-                //nervous raichu
+                picMoods.Image = NervousRaichu;
             }
         }
 
@@ -335,18 +370,7 @@ namespace FinalProjectITEC140
             }
             else if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == true)
             {
-                //sad raichu
-            }
-        }
-        void PokemonExtatic()
-        {
-            if (prbHappiness.Value > 80 && prbHunger.Value > 40 && prbPee.Value < 70 && prbHealth.Value == 100)
-            {
-                picMoods.Image = HappyPika;
-            }
-            else if (prbHappiness.Value > 80 && prbHunger.Value > 40 && prbPee.Value < 70 && prbHealth.Value == 100 && picEvolution.Visible == true)
-            {
-                //extactic raichu
+                picMoods.Image= SadRaichu;
             }
         }
 

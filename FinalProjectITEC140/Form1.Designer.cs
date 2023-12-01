@@ -257,7 +257,7 @@
             // BattleTImer
             // 
             BattleTImer.Interval = 5000;
-            BattleTImer.Tick += BattleTImer_Tick;
+            BattleTImer.Tick += BattleTimer_Tick;
             // 
             // btnPotion
             // 
@@ -275,7 +275,7 @@
             // 
             // GameTimer
             // 
-            GameTimer.Interval = 180000;
+            GameTimer.Interval = 30000;
             GameTimer.Tick += GameTimer_Tick;
             // 
             // picEvolution

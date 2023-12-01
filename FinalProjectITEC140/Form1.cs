@@ -5,15 +5,20 @@ namespace FinalProjectITEC140
 {
     public partial class Form1 : Form
     {
-        Bitmap Neutral = new Bitmap("../../../resources/NeutralPikachu.jpg");
-        Bitmap Poopin = new Bitmap("../../../resources/PoopinPikachu.jpg");
-        Bitmap Hungry = new Bitmap("../../../resources/HungryPikachu.jpg");
-        Bitmap Fainted = new Bitmap("../../../resources/FaintedPikachu.jpg");
-        Bitmap Extatic = new Bitmap("../../../resources/ExtaticPikachu.jpg");
-        Bitmap Happy = new Bitmap("../../../resources/HappyPikachu.jpg");
-        Bitmap Nervous = new Bitmap("../../../resources/NervousPikachu.jpg");
-        Bitmap Sad = new Bitmap("../../../resources/SadPikachu.jpg");
-        Bitmap Angry = new Bitmap("../../../resources/AngryPikachu.jpg");
+        Bitmap NeutralPika = new Bitmap("../../../resources/NeutralPika.jpg");
+        Bitmap PoopinPika = new Bitmap("../../../resources/PoopinPika.jpg");
+        Bitmap FaintedPika = new Bitmap("../../../resources/FaintedPika.jpg");
+        Bitmap HappyPika = new Bitmap("../../../resources/HappyPikachu.jpg");
+        Bitmap NervousPika = new Bitmap("../../../resources/NervousPika.jpg");
+        Bitmap SadPika = new Bitmap("../../../resources/SadPika.jpg");
+        Bitmap AngryPika = new Bitmap("../../../resources/AngryPika.jpg");
+        Bitmap NeutralRaichu = new Bitmap("../../../resources/NeutralRaichu.jpg");
+        Bitmap PoopinRaichu = new Bitmap("../../../resources/PoopinRaichu.jpg");
+        Bitmap FaintedRaichu = new Bitmap("../../../resources/FaintedRaichu.jpg");
+        Bitmap HappyRaichu = new Bitmap("../../../resources/HappyRaichu.jpg");
+        Bitmap NervousRaichu = new Bitmap("../../../resoucres/NervousRaichu.jpg");
+        Bitmap SadRaichu = new Bitmap("../../../resources/SadRaichu.jpg");
+        Bitmap AngryRaichu = new Bitmap("../../../resources/AngryRaichu.jpg");
         public Form1()
         {
             InitializeComponent();
@@ -38,7 +43,7 @@ namespace FinalProjectITEC140
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            picMoods.Image = Neutral;
+            picMoods.Image = NeutralPika;
         }
 
         private void btnFeed_Click(object sender, EventArgs e)
@@ -70,38 +75,75 @@ namespace FinalProjectITEC140
 
         private void btnPlay_MouseDown(object sender, MouseEventArgs e)
         {
-            if (btnPlay.Enabled == true && prbHappiness.Value < 85)
+            if (btnPlay.Enabled == true && prbHappiness.Value < 85 && picEvolution.Visible == false)
             {
                 prbHappiness.Value += 15;
+                picMoods.Image = HappyPika;
             }
-            else if (btnPlay.Enabled == true && prbHappiness.Value > 85)
+            else if (btnPlay.Enabled == true && prbHappiness.Value > 85 && picEvolution.Visible == false)
             {
                 prbHappiness.Value = 100;
+                picMoods.Image = HappyPika;
             }
-            picMoods.Image = Happy;
+            else if (btnPlay.Enabled == true && prbHappiness.Value < 85 && picEvolution.Visible == true)
+            {
+                prbHappiness.Value += 15;
+                picMoods.Image = HappyRaichu;
+            }
+            else if (btnPlay.Enabled == true && prbHappiness.Value > 85 && picEvolution.Visible == true)
+            {
+                prbHappiness.Value = 100;
+                picMoods.Image = HappyRaichu;
+            }
         }
 
         private void btnPlay_MouseUp(object sender, MouseEventArgs e)
         {
-            picMoods.Image = Neutral;
+            if (picEvolution.Visible == true)
+            {
+                picMoods.Image = NeutralRaichu;
+            }
+            else 
+            {
+                picMoods.Image= NeutralPika;
+            }
         }
 
         private void btnBathRoom_MouseDown(object sender, MouseEventArgs e)
         {
-            picMoods.Image = Poopin;
-            if (btnBathRoom.Enabled && prbPee.Value > 30)
+            picMoods.Image = PoopinPika;
+            if (btnBathRoom.Enabled && prbPee.Value > 30 && picEvolution.Visible == false)
             {
                 prbPee.Value -= 30;
+                picMoods.Image = PoopinPika;
             }
-            else if (btnBathRoom.Enabled == true && prbPee.Value < 30)
+            else if (btnBathRoom.Enabled == true && prbPee.Value < 30 && picEvolution.Visible == false)
             {
                 prbPee.Value = 0;
+                picMoods.Image = PoopinPika;
+            }
+            else if (btnBathRoom.Enabled && prbPee.Value > 30 && picEvolution.Visible == true)
+            {
+                prbPee.Value -= 30;
+                picMoods.Image = PoopinRaichu;
+            }
+            else if (btnBathRoom.Enabled == true && prbPee.Value < 30 && picEvolution.Visible == true) 
+            {
+                prbPee.Value = 0;
+                picMoods.Image = PoopinRaichu;
             }
         }
 
         private void btnBathRoom_MouseUp(object sender, MouseEventArgs e)
         {
-            picMoods.Image = Neutral;
+            if (picEvolution.Visible == true)
+            {
+                picMoods.Image = NeutralRaichu;
+            }
+            else
+            {
+                picMoods.Image = NeutralPika;
+            }
         }
         private void btnPet_MouseDown(object sender, MouseEventArgs e)
         {
@@ -113,12 +155,12 @@ namespace FinalProjectITEC140
             {
                 prbHappiness.Value = 100;
             }
-            picMoods.Image = Happy;
+            picMoods.Image = HappyPika;
         }
 
         private void btnPet_MouseUp(object sender, MouseEventArgs e)
         {
-            picMoods.Image = Neutral;
+            picMoods.Image = NeutralPika;
         }
 
         private void btnFeed_MouseDown(object sender, MouseEventArgs e)
@@ -218,7 +260,7 @@ namespace FinalProjectITEC140
         {
             if (prbHealth.Value == 0)
             {
-                picMoods.Image = Fainted;
+                picMoods.Image = FaintedPika;
                 prbHealth.Value = 0;
                 prbHappiness.Value = 0;
                 prbHunger.Value = 0;
@@ -251,7 +293,7 @@ namespace FinalProjectITEC140
         {
             if (prbHealth.Value <= 75)
             {
-                picMoods.Image = Angry;
+                picMoods.Image = AngryPika;
                 prbTrainerHealth.Visible = true;
                 lblTrainerHealth.Visible = true;
                 BattleTImer.Enabled = true;
@@ -270,25 +312,14 @@ namespace FinalProjectITEC140
                 BattleTImer.Enabled = false;
             }
             fight();
-            
-        }
-        void PokemonHungry()
-        {
-            if (prbHunger.Value <= 30)
-            {
-                picMoods.Image = Hungry;
-            }
-            else if (prbHunger.Value <= 30 && picEvolution.Visible == true)
-            {
-                //hungry raichu
-            }
 
         }
+
         void PokemonNervous()
         {
             if (prbHappiness.Value <= 30 && prbHunger.Value <= 20 && prbPee.Value >= 80)
             {
-                picMoods.Image = Nervous;
+                picMoods.Image = NervousPika;
             }
             else if (prbHappiness.Value <= 30 && prbHunger.Value <= 20 && prbPee.Value >= 80 && picEvolution.Visible == true)
             {
@@ -300,7 +331,7 @@ namespace FinalProjectITEC140
         {
             if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value > 75 && prbHealth.Value < 100)
             {
-                picMoods.Image = Sad;
+                picMoods.Image = SadPika;
             }
             else if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == true)
             {
@@ -311,7 +342,7 @@ namespace FinalProjectITEC140
         {
             if (prbHappiness.Value > 80 && prbHunger.Value > 40 && prbPee.Value < 70 && prbHealth.Value == 100)
             {
-                picMoods.Image = Extatic;
+                picMoods.Image = HappyPika;
             }
             else if (prbHappiness.Value > 80 && prbHunger.Value > 40 && prbPee.Value < 70 && prbHealth.Value == 100 && picEvolution.Visible == true)
             {
@@ -350,7 +381,7 @@ namespace FinalProjectITEC140
         }
         void fight()
         {
-           
+
         }
     }
 }

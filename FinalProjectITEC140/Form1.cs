@@ -1,6 +1,3 @@
-using System.ComponentModel.Design;
-using System.Runtime.Versioning;
-
 namespace FinalProjectITEC140
 {
     public partial class Form1 : Form
@@ -8,7 +5,7 @@ namespace FinalProjectITEC140
         Bitmap NeutralPika = new Bitmap("../../../resources/NeutralPika.jpg");
         Bitmap PoopinPika = new Bitmap("../../../resources/PoopinPika.jpg");
         Bitmap FaintedPika = new Bitmap("../../../resources/FaintedPika.jpg");
-        Bitmap HappyPika = new Bitmap("../../../resources/HappyPikachu.jpg");
+        Bitmap HappyPika = new Bitmap("../../../resources/HappyPika.jpg");
         Bitmap NervousPika = new Bitmap("../../../resources/NervousPika.jpg");
         Bitmap SadPika = new Bitmap("../../../resources/SadPika.jpg");
         Bitmap AngryPika = new Bitmap("../../../resources/AngryPika.jpg");
@@ -16,7 +13,7 @@ namespace FinalProjectITEC140
         Bitmap PoopinRaichu = new Bitmap("../../../resources/PoopinRaichu.jpg");
         Bitmap FaintedRaichu = new Bitmap("../../../resources/FaintedRaichu.jpg");
         Bitmap HappyRaichu = new Bitmap("../../../resources/HappyRaichu.jpg");
-        Bitmap NervousRaichu = new Bitmap("../../../resoucres/NervousRaichu.jpg");
+        Bitmap NervousRaichu = new Bitmap("../../../resources/NervousRaichu.jpg");
         Bitmap SadRaichu = new Bitmap("../../../resources/SadRaichu.jpg");
         Bitmap AngryRaichu = new Bitmap("../../../resources/AngryRaichu.jpg");
         public Form1()
@@ -103,9 +100,9 @@ namespace FinalProjectITEC140
             {
                 picMoods.Image = NeutralRaichu;
             }
-            else 
+            else
             {
-                picMoods.Image= NeutralPika;
+                picMoods.Image = NeutralPika;
             }
         }
 
@@ -127,7 +124,7 @@ namespace FinalProjectITEC140
                 prbPee.Value -= 30;
                 picMoods.Image = PoopinRaichu;
             }
-            else if (btnBathRoom.Enabled == true && prbPee.Value < 30 && picEvolution.Visible == true) 
+            else if (btnBathRoom.Enabled == true && prbPee.Value < 30 && picEvolution.Visible == true)
             {
                 prbPee.Value = 0;
                 picMoods.Image = PoopinRaichu;
@@ -162,7 +159,7 @@ namespace FinalProjectITEC140
                 prbHappiness.Value += 5;
                 picMoods.Image = HappyRaichu;
             }
-            else if (btnPet.Enabled == true && prbHappiness.Value > 95 && picEvolution.Visible == true) 
+            else if (btnPet.Enabled == true && prbHappiness.Value > 95 && picEvolution.Visible == true)
             {
                 prbHappiness.Value = 100;
                 picMoods.Image = HappyRaichu;
@@ -293,7 +290,7 @@ namespace FinalProjectITEC140
                 btnPet.Enabled = false;
                 btnPotion.Enabled = false;
             }
-            else if (prbHealth.Value == 0 && picEvolution.Visible == true) 
+            else if (prbHealth.Value == 0 && picEvolution.Visible == true)
             {
                 picMoods.Image = FaintedRaichu;
                 prbHealth.Value = 0;
@@ -336,7 +333,7 @@ namespace FinalProjectITEC140
             }
             else if (prbHealth.Value <= 75 && picEvolution.Visible == true)
             {
-                picMoods.Image = AngryRaichu; 
+                picMoods.Image = AngryRaichu;
                 prbTrainerHealth.Visible = true;
                 lblTrainerHealth.Visible = true;
                 BattleTImer.Enabled = true;
@@ -370,7 +367,7 @@ namespace FinalProjectITEC140
             }
             else if (prbHappiness.Value == 0 && prbHunger.Value == 0 && prbPee.Value == 100 && prbHealth.Value > 75 && prbHealth.Value < 100 && picEvolution.Visible == true)
             {
-                picMoods.Image= SadRaichu;
+                picMoods.Image = SadRaichu;
             }
         }
 

@@ -321,7 +321,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkRed;
-            ClientSize = new Size(655, 387);
+            ClientSize = new Size(651, 383);
             Controls.Add(btnHelp);
             Controls.Add(btnCredit);
             Controls.Add(picEvolution);
@@ -342,7 +342,9 @@
             Controls.Add(prbPee);
             Controls.Add(label1);
             Controls.Add(prbHealth);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Pokemon Petcare";
             Load += Form1_Load;

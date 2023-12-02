@@ -1,4 +1,5 @@
 using System.Diagnostics.Eventing.Reader;
+using System.Media;
 
 namespace FinalProjectITEC140
 {
@@ -18,6 +19,8 @@ namespace FinalProjectITEC140
         Bitmap NervousRaichu = new Bitmap("../../../resources/NervousRaichu.jpg");
         Bitmap SadRaichu = new Bitmap("../../../resources/SadRaichu.jpg");
         Bitmap AngryRaichu = new Bitmap("../../../resources/AngryRaichu.jpg");
+        SoundPlayer pikaaa = new SoundPlayer("../../../resources/Pikaaa.wav");
+        SoundPlayer click = new SoundPlayer("../../../resources/btnClick.wav");
         public Form1()
         {
             InitializeComponent();
@@ -43,10 +46,12 @@ namespace FinalProjectITEC140
         private void Form1_Load(object sender, EventArgs e)
         {
             picMoods.Image = NeutralPika;
+            pikaaa.Play();
         }
 
         private void btnFeed_Click(object sender, EventArgs e)
         {
+            click.Play();
             if (btnFeed.Enabled == true && prbHunger.Value < 40)
             {
                 prbHunger.Value += 20;
@@ -74,6 +79,7 @@ namespace FinalProjectITEC140
 
         private void btnPlay_MouseDown(object sender, MouseEventArgs e)
         {
+            click.Play();
             if (btnPlay.Enabled == true && prbHappiness.Value < 85 && picEvolution.Visible == false)
             {
                 prbHappiness.Value += 15;
@@ -118,6 +124,7 @@ namespace FinalProjectITEC140
 
         private void btnBathRoom_MouseDown(object sender, MouseEventArgs e)
         {
+            click.Play();
             picMoods.Image = PoopinPika;
             if (btnBathRoom.Enabled && prbPee.Value > 30 && picEvolution.Visible == false)
             {
@@ -160,6 +167,7 @@ namespace FinalProjectITEC140
         }
         private void btnPet_MouseDown(object sender, MouseEventArgs e)
         {
+            click.Play();
             if (btnPet.Enabled == true && prbHappiness.Value < 100 && picEvolution.Visible == false)
             {
                 prbHappiness.Value += 5;
@@ -471,6 +479,7 @@ namespace FinalProjectITEC140
         }
         private void btnPotion_Click(object sender, EventArgs e)
         {
+            click.Play();
             if (btnPotion.Enabled == true && prbHealth.Value < 75)
             {
                 prbHealth.Value += 25;
@@ -500,11 +509,13 @@ namespace FinalProjectITEC140
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
+            click.Play();
             MessageBox.Show("Naturally you have to look after your pets. Taking them to the BATHROOM and making sure they stay FED and HAPPY. If not, your Pokemon just might become upset with you!");
         }
 
         private void btnCredit_Click(object sender, EventArgs e)
         {
+            click.Play();
             MessageBox.Show("Created by NicK Z.");
         }
 
@@ -514,6 +525,7 @@ namespace FinalProjectITEC140
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
+            click.Play();
             if (picMoods.Image == FaintedPika || picMoods.Image == FaintedRaichu)
             {
                 MessageBox.Show("Shame on you for leaving your Pokemon behind!");

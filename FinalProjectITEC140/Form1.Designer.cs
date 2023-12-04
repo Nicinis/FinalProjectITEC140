@@ -62,7 +62,7 @@
             // prbHealth
             // 
             prbHealth.Location = new Point(136, 38);
-            prbHealth.Margin = new Padding(2, 2, 2, 2);
+            prbHealth.Margin = new Padding(2);
             prbHealth.Name = "prbHealth";
             prbHealth.Size = new Size(182, 25);
             prbHealth.TabIndex = 0;
@@ -82,8 +82,8 @@
             // 
             // prbPee
             // 
-            prbPee.Location = new Point(136, 159);
-            prbPee.Margin = new Padding(2, 2, 2, 2);
+            prbPee.Location = new Point(136, 188);
+            prbPee.Margin = new Padding(2);
             prbPee.Name = "prbPee";
             prbPee.Size = new Size(114, 20);
             prbPee.TabIndex = 2;
@@ -93,7 +93,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(78, 158);
+            label2.Location = new Point(78, 187);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(51, 23);
@@ -102,8 +102,8 @@
             // 
             // prbHunger
             // 
-            prbHunger.Location = new Point(136, 116);
-            prbHunger.Margin = new Padding(2, 2, 2, 2);
+            prbHunger.Location = new Point(136, 140);
+            prbHunger.Margin = new Padding(2);
             prbHunger.Maximum = 60;
             prbHunger.Name = "prbHunger";
             prbHunger.Size = new Size(152, 20);
@@ -115,7 +115,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(34, 117);
+            label3.Location = new Point(34, 141);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
             label3.Size = new Size(93, 23);
@@ -125,8 +125,8 @@
             // 
             // prbHappiness
             // 
-            prbHappiness.Location = new Point(136, 79);
-            prbHappiness.Margin = new Padding(2, 2, 2, 2);
+            prbHappiness.Location = new Point(136, 91);
+            prbHappiness.Margin = new Padding(2);
             prbHappiness.Name = "prbHappiness";
             prbHappiness.RightToLeft = RightToLeft.No;
             prbHappiness.Size = new Size(166, 20);
@@ -137,7 +137,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(8, 74);
+            label4.Location = new Point(8, 86);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
             label4.Size = new Size(119, 23);
@@ -149,8 +149,8 @@
             btnFeed.BackColor = Color.Yellow;
             btnFeed.FlatStyle = FlatStyle.Popup;
             btnFeed.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnFeed.Location = new Point(204, 194);
-            btnFeed.Margin = new Padding(2, 2, 2, 2);
+            btnFeed.Location = new Point(216, 225);
+            btnFeed.Margin = new Padding(2);
             btnFeed.Name = "btnFeed";
             btnFeed.Size = new Size(82, 51);
             btnFeed.TabIndex = 8;
@@ -165,8 +165,8 @@
             btnBathRoom.BackColor = Color.Yellow;
             btnBathRoom.FlatStyle = FlatStyle.Popup;
             btnBathRoom.Font = new Font("Showcard Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnBathRoom.Location = new Point(297, 194);
-            btnBathRoom.Margin = new Padding(2, 2, 2, 2);
+            btnBathRoom.Location = new Point(314, 225);
+            btnBathRoom.Margin = new Padding(2);
             btnBathRoom.Name = "btnBathRoom";
             btnBathRoom.Size = new Size(82, 52);
             btnBathRoom.TabIndex = 9;
@@ -179,9 +179,9 @@
             // picMoods
             // 
             picMoods.Location = new Point(322, 38);
-            picMoods.Margin = new Padding(2, 2, 2, 2);
+            picMoods.Margin = new Padding(2);
             picMoods.Name = "picMoods";
-            picMoods.Size = new Size(150, 150);
+            picMoods.Size = new Size(175, 175);
             picMoods.TabIndex = 10;
             picMoods.TabStop = false;
             // 
@@ -190,8 +190,8 @@
             btnPlay.BackColor = Color.Yellow;
             btnPlay.FlatStyle = FlatStyle.Popup;
             btnPlay.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnPlay.Location = new Point(111, 194);
-            btnPlay.Margin = new Padding(2, 2, 2, 2);
+            btnPlay.Location = new Point(117, 225);
+            btnPlay.Margin = new Padding(2);
             btnPlay.Name = "btnPlay";
             btnPlay.Size = new Size(82, 52);
             btnPlay.TabIndex = 11;
@@ -207,8 +207,8 @@
             btnPet.BackgroundImageLayout = ImageLayout.None;
             btnPet.FlatStyle = FlatStyle.Popup;
             btnPet.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnPet.Location = new Point(18, 194);
-            btnPet.Margin = new Padding(2, 2, 2, 2);
+            btnPet.Location = new Point(18, 225);
+            btnPet.Margin = new Padding(2);
             btnPet.Name = "btnPet";
             btnPet.Size = new Size(82, 52);
             btnPet.TabIndex = 12;
@@ -238,8 +238,8 @@
             btnExit.BackColor = Color.FromArgb(0, 192, 0);
             btnExit.FlatStyle = FlatStyle.Popup;
             btnExit.Font = new Font("Showcard Gothic", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            btnExit.Location = new Point(418, 11);
-            btnExit.Margin = new Padding(2, 2, 2, 2);
+            btnExit.Location = new Point(443, 11);
+            btnExit.Margin = new Padding(2);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(54, 23);
             btnExit.TabIndex = 13;
@@ -249,7 +249,7 @@
             // 
             // prbTrainerHealth
             // 
-            prbTrainerHealth.Location = new Point(246, 250);
+            prbTrainerHealth.Location = new Point(246, 285);
             prbTrainerHealth.Maximum = 160;
             prbTrainerHealth.Name = "prbTrainerHealth";
             prbTrainerHealth.Size = new Size(198, 23);
@@ -260,7 +260,7 @@
             // 
             lblTrainerHealth.AutoSize = true;
             lblTrainerHealth.Font = new Font("Showcard Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTrainerHealth.Location = new Point(34, 250);
+            lblTrainerHealth.Location = new Point(34, 285);
             lblTrainerHealth.Margin = new Padding(2, 0, 2, 0);
             lblTrainerHealth.Name = "lblTrainerHealth";
             lblTrainerHealth.Size = new Size(177, 23);
@@ -278,7 +278,7 @@
             btnPotion.BackColor = Color.Yellow;
             btnPotion.FlatStyle = FlatStyle.Popup;
             btnPotion.Font = new Font("Showcard Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnPotion.Location = new Point(390, 194);
+            btnPotion.Location = new Point(413, 225);
             btnPotion.Name = "btnPotion";
             btnPotion.Size = new Size(82, 50);
             btnPotion.TabIndex = 16;
@@ -295,9 +295,9 @@
             // 
             picEvolution.BackgroundImage = (Image)resources.GetObject("picEvolution.BackgroundImage");
             picEvolution.BackgroundImageLayout = ImageLayout.Stretch;
-            picEvolution.Location = new Point(284, 159);
+            picEvolution.Location = new Point(276, 170);
             picEvolution.Name = "picEvolution";
-            picEvolution.Size = new Size(33, 28);
+            picEvolution.Size = new Size(42, 43);
             picEvolution.TabIndex = 17;
             picEvolution.TabStop = false;
             picEvolution.Visible = false;
@@ -307,10 +307,10 @@
             btnCredit.BackColor = Color.FromArgb(0, 192, 0);
             btnCredit.FlatStyle = FlatStyle.Popup;
             btnCredit.Font = new Font("Showcard Gothic", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            btnCredit.Location = new Point(359, 11);
-            btnCredit.Margin = new Padding(2, 2, 2, 2);
+            btnCredit.Location = new Point(384, 11);
+            btnCredit.Margin = new Padding(2);
             btnCredit.Name = "btnCredit";
-            btnCredit.Size = new Size(54, 23);
+            btnCredit.Size = new Size(55, 23);
             btnCredit.TabIndex = 18;
             btnCredit.Text = "Credit";
             btnCredit.UseVisualStyleBackColor = false;
@@ -321,8 +321,8 @@
             btnHelp.BackColor = Color.FromArgb(0, 192, 0);
             btnHelp.FlatStyle = FlatStyle.Popup;
             btnHelp.Font = new Font("Showcard Gothic", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            btnHelp.Location = new Point(303, 11);
-            btnHelp.Margin = new Padding(2, 2, 2, 2);
+            btnHelp.Location = new Point(328, 11);
+            btnHelp.Margin = new Padding(2);
             btnHelp.Name = "btnHelp";
             btnHelp.Size = new Size(54, 23);
             btnHelp.TabIndex = 19;
@@ -335,7 +335,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkRed;
-            ClientSize = new Size(499, 292);
+            ClientSize = new Size(515, 327);
             Controls.Add(btnHelp);
             Controls.Add(btnCredit);
             Controls.Add(picEvolution);
@@ -358,7 +358,7 @@
             Controls.Add(prbHealth);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "Form1";
             Text = "Pokemon Petcare";
